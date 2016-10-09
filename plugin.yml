@@ -1,0 +1,4 @@
+name: Hub
+main: me.iran.hub.Hub
+version: 1.0
+commands:
