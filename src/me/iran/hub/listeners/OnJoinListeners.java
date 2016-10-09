@@ -25,15 +25,16 @@ public class OnJoinListeners
   @EventHandler
   public void onJoin(PlayerJoinEvent event) {
 	  Player player = event.getPlayer();
+	  items.onJoinHand(player);
 	  
 	  if(player.hasPermission("hub.basic")) {
 		  rank.setBasic(player);
 	  } else if(player.hasPermission("hub.silver")) {
-		  
+		  rank.setSilver(player);
 	  }else if(player.hasPermission("hub.gold")) {
-		  
+		  rank.setGold(player);
 	  }else if(player.hasPermission("hub.platinum")) {
-		  
+		  rank.setPlatinum(player);
 	  }else {
 		  player.sendMessage(ChatColor.YELLOW + "Your rank is " + ChatColor.WHITE + "Default");
 	  }
