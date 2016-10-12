@@ -26,7 +26,6 @@ public class OnJoinListeners
   public void onJoin(PlayerJoinEvent event) {
 	  Player player = event.getPlayer();
 	  items.onJoinHand(player);
-	  
 	  if(player.hasPermission("hub.basic")) {
 		  rank.setBasic(player);
 	  } else if(player.hasPermission("hub.silver")) {
