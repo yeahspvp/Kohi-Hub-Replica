@@ -11,6 +11,7 @@ import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
 public class RankArmor
@@ -27,6 +28,11 @@ public class RankArmor
     ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
     ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
     ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
+    ItemStack compass = new ItemStack(Material.COMPASS);
+    
+    ItemMeta cmeta = compass.getItemMeta();
+    cmeta.setDisplayName(ChatColor.GOLD + "Server Selector");
+    compass.setItemMeta(cmeta);
     
     LeatherArmorMeta meta = (LeatherArmorMeta)chestplate.getItemMeta();
     List<String> lore = new ArrayList<String>();
@@ -50,7 +56,7 @@ public class RankArmor
     player.getInventory().setChestplate(chestplate);
     player.getInventory().setLeggings(leggings);
     player.getInventory().setBoots(boots);
-    player.getInventory().addItem(new ItemStack[] { chestplate });
+    player.getInventory().setItem(0, compass);
     player.updateInventory();
     player.sendMessage(ChatColor.YELLOW + "Your rank is " + ChatColor.GOLD + "Basic");
   }
@@ -60,6 +66,14 @@ public class RankArmor
     ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE, 1);
     ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
     ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
+    
+    ItemStack compass = new ItemStack(Material.COMPASS);
+    
+    ItemMeta cmeta = compass.getItemMeta();
+    cmeta.setDisplayName(ChatColor.GOLD + "Server Selector");
+    compass.setItemMeta(cmeta);
+    
+    
     LeatherArmorMeta meta = (LeatherArmorMeta)chestplate.getItemMeta();
     leggings.addEnchantment(Enchantment.DURABILITY, 3);
     chestplate.addEnchantment(Enchantment.DURABILITY, 3);
@@ -77,6 +91,7 @@ public class RankArmor
     player.getInventory().setChestplate(chestplate);
     player.getInventory().setLeggings(leggings);
     player.getInventory().setBoots(boots);
+    player.getInventory().setItem(0, compass);
     player.updateInventory();
     player.sendMessage(ChatColor.YELLOW + "Your rank is " + ChatColor.GOLD + "Silver");
   }
@@ -86,6 +101,12 @@ public class RankArmor
     ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE, 1);
     ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
     ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
+    ItemStack compass = new ItemStack(Material.COMPASS);
+    
+    ItemMeta cmeta = compass.getItemMeta();
+    cmeta.setDisplayName(ChatColor.GOLD + "Server Selector");
+    compass.setItemMeta(cmeta);
+    
     LeatherArmorMeta meta = (LeatherArmorMeta)chestplate.getItemMeta();
     leggings.addEnchantment(Enchantment.DURABILITY, 3);
     chestplate.addEnchantment(Enchantment.DURABILITY, 3);
@@ -103,6 +124,7 @@ public class RankArmor
     player.getInventory().setChestplate(chestplate);
     player.getInventory().setLeggings(leggings);
     player.getInventory().setBoots(boots);
+    player.getInventory().setItem(0, compass);
     player.updateInventory();
     player.sendMessage(ChatColor.YELLOW + "Your rank is " + ChatColor.GOLD + "Gold");
   }
@@ -112,6 +134,12 @@ public class RankArmor
     ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE, 1);
     ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
     ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
+    ItemStack compass = new ItemStack(Material.COMPASS);
+    
+    ItemMeta cmeta = compass.getItemMeta();
+    cmeta.setDisplayName(ChatColor.GOLD + "Server Selector");
+    compass.setItemMeta(cmeta);
+    
     LeatherArmorMeta meta = (LeatherArmorMeta)chestplate.getItemMeta();
     leggings.addEnchantment(Enchantment.DURABILITY, 3);
     chestplate.addEnchantment(Enchantment.DURABILITY, 3);
@@ -129,6 +157,7 @@ public class RankArmor
     player.getInventory().setChestplate(chestplate);
     player.getInventory().setLeggings(leggings);
     player.getInventory().setBoots(boots);
+    player.getInventory().setItem(0, compass);
     player.updateInventory();
     player.sendMessage(ChatColor.YELLOW + "Your rank is " + ChatColor.GOLD + "Platinum");
   }
